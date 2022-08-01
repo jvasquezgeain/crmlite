@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Calendar trackings</h1>
+
+<div id="calendar_trackings">
+  <% @calendar_trackings.each do |calendar_tracking| %>
+    <%= render calendar_tracking %>
+    <p>
+      <%= link_to "Show this calendar tracking", calendar_tracking %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New calendar tracking", new_calendar_tracking_path %>

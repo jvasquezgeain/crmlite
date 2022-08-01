@@ -1,0 +1,82 @@
+<%= form_with(model: calendar) do |form| %>
+  <% if calendar.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(calendar.errors.count, "error") %> prohibited this calendar from being saved:</h2>
+
+      <ul>
+        <% calendar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :company, style: "display: block" %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div>
+    <%= form.label :contact, style: "display: block" %>
+    <%= form.text_field :contact %>
+  </div>
+
+  <div>
+    <%= form.label :job_title, style: "display: block" %>
+    <%= form.text_field :job_title %>
+  </div>
+
+  <div>
+    <%= form.label :type_customer, style: "display: block" %>
+    <%= form.text_field :type_customer %>
+  </div>
+
+  <div>
+    <%= form.label :type_scheduled, style: "display: block" %>
+    <%= form.text_field :type_scheduled %>
+  </div>
+
+  <div>
+    <%= form.label :assigned_by_id, style: "display: block" %>
+    <%= form.number_field :assigned_by_id %>
+  </div>
+
+  <div>
+    <%= form.label :agent_id, style: "display: block" %>
+    <%= form.number_field :agent_id %>
+  </div>
+
+  <div>
+    <%= form.label :day, style: "display: block" %>
+    <%= form.date_field :day %>
+  </div>
+
+  <div>
+    <%= form.label :hour, style: "display: block" %>
+    <%= form.time_field :hour %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div>
+    <%= form.label :observation, style: "display: block" %>
+    <%= form.text_field :observation %>
+  </div>
+
+  <div>
+    <%= form.label :stated_at, style: "display: block" %>
+    <%= form.check_box :stated_at %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

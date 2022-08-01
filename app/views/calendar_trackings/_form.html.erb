@@ -1,0 +1,67 @@
+<%= form_with(model: calendar_tracking) do |form| %>
+  <% if calendar_tracking.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(calendar_tracking.errors.count, "error") %> prohibited this calendar_tracking from being saved:</h2>
+
+      <ul>
+        <% calendar_tracking.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :day, style: "display: block" %>
+    <%= form.date_field :day %>
+  </div>
+
+  <div>
+    <%= form.label :hour, style: "display: block" %>
+    <%= form.time_field :hour %>
+  </div>
+
+  <div>
+    <%= form.label :comments, style: "display: block" %>
+    <%= form.text_area :comments %>
+  </div>
+
+  <div>
+    <%= form.label :action, style: "display: block" %>
+    <%= form.number_field :action %>
+  </div>
+
+  <div>
+    <%= form.label :calendar_id, style: "display: block" %>
+    <%= form.text_field :calendar_id %>
+  </div>
+
+  <div>
+    <%= form.label :type_customer, style: "display: block" %>
+    <%= form.number_field :type_customer %>
+  </div>
+
+  <div>
+    <%= form.label :type_scheduled, style: "display: block" %>
+    <%= form.number_field :type_scheduled %>
+  </div>
+
+  <div>
+    <%= form.label :agent_id, style: "display: block" %>
+    <%= form.number_field :agent_id %>
+  </div>
+
+  <div>
+    <%= form.label :observation, style: "display: block" %>
+    <%= form.text_field :observation %>
+  </div>
+
+  <div>
+    <%= form.label :stated_at, style: "display: block" %>
+    <%= form.check_box :stated_at %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

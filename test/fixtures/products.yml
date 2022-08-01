@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  name_of: MyString
+  type_product: MyString
+  user: one
+  stated_at: false
+
+two:
+  code: MyString
+  name_of: MyString
+  type_product: MyString
+  user: two
+  stated_at: false

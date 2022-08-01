@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @calendar_tracking %>
+
+<div>
+  <%= link_to "Edit this calendar tracking", edit_calendar_tracking_path(@calendar_tracking) %> |
+  <%= link_to "Back to calendar trackings", calendar_trackings_path %>
+
+  <%= button_to "Destroy this calendar tracking", @calendar_tracking, method: :delete %>
+</div>
